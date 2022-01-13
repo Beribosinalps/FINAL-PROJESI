@@ -5,11 +5,15 @@ import pygame.sprite as sprite
 clock = pygame.time.Clock()
 
 from pygame.locals import *
+
 pygame.mixer.pre_init(44100, -16, 2, 512)
+
 pygame.init() # initiates pygame
+
 pygame.mixer.set_num_channels(64)
 
 SCREEN_WIDTH = 1900
+
 SCREEN_HEIGHT = 1060
 
 pygame.display.set_caption('Pygame Mrincredible')
@@ -43,16 +47,16 @@ def generate_chunk(x,y):
                 tile_type = 1 # grass
             elif target_y == 8 - height - 1:
                 if random.randint(1,5) == 1:       
-                    tile_type = 3 # plant
+                    tile_type = 3 # plant 
             elif target_y == 1 - height - 1:        
                 if random.randint(1,16) == 1:
                     tile_type = 4
             elif target_y == 3 - height - 1:
                 if random.randint(1,16) == 1:
-                    tile_type = 5  
+                    tile_type = 5 
             elif target_y == 0 - height - 1:
                 if random.randint(1,10) == 1:            
-                    tile_type = 6              
+                    tile_type = 6             
             if tile_type != 0:
                 chunk_data.append([[target_x,target_y],tile_type])
     return chunk_data
@@ -157,7 +161,7 @@ def move(rect,movement,tiles):
 
 while True: # game loop
         
-    display.fill((135,206,235))# clear screen by filling it with sky blue
+    display.fill((135,206,235))# filling sky with sky blue color
     
     if grass_sound_timer > 0:
            grass_sound_timer -= 1    
