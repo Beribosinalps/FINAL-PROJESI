@@ -14,7 +14,7 @@ pygame.mixer.set_num_channels(64)
 
 SCREEN_WIDTH = 1900
 
-SCREEN_HEIGHT = 1030
+SCREEN_HEIGHT = 1020
 
 pygame.display.set_caption('Pygame Mrincredible')
 
@@ -52,7 +52,7 @@ def generate_chunk(x,y):
                 if random.randint(1,16) == 1:
                     tile_type = 4
             elif target_y == 3 - height - 1:
-                if random.randint(1,10) == 1:
+                if random.randint(1,2) == 1:
                     tile_type = 5 
             elif target_y == 0 - height - 1:
                 if random.randint(1,10) == 1:            
@@ -163,7 +163,7 @@ def move(rect,movement,tiles):
 
 while True: # game loop
         
-    display.fill((135,206,235))# filling sky with sky blue color
+    display.fill((135,206,235))# filling sky with sky blue  rgb color
     
     if grass_sound_timer > 0:
            grass_sound_timer -= 1    
