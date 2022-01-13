@@ -14,7 +14,7 @@ pygame.mixer.set_num_channels(64)
 
 SCREEN_WIDTH = 1900
 
-SCREEN_HEIGHT = 1060
+SCREEN_HEIGHT = 1030
 
 pygame.display.set_caption('Pygame Mrincredible')
 
@@ -52,7 +52,7 @@ def generate_chunk(x,y):
                 if random.randint(1,16) == 1:
                     tile_type = 4
             elif target_y == 3 - height - 1:
-                if random.randint(1,16) == 1:
+                if random.randint(1,10) == 1:
                     tile_type = 5 
             elif target_y == 0 - height - 1:
                 if random.randint(1,10) == 1:            
